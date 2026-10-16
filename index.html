@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c1d22">
+  <meta name="description" content="Fatima Humbatova — Computer Science at FIU. Exploring cybersecurity, AI, digital forensics and meaningful software. Always learning. Always building. Always protecting.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fatima Humbatova | Always learning. Always building. Always protecting.">
+  <meta property="og:description" content="A cozy corner of the internet for code, curiosity, research and security.">
+  <title>Fatima Humbatova — Code, Curiosity & Cybersecurity</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;450;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="intro" class="intro" aria-label="Welcome to Fatima's portfolio">
+    <div class="intro-inner">
+      <div class="intro-mark">FH<span>_</span></div>
+      <p class="intro-label">initializing / a little corner of the internet</p>
+      <div class="intro-progress"><span></span></div>
+      <p class="intro-bottom">learn <i>·</i> build <i>·</i> protect</p>
+      <button id="skipIntro" class="intro-skip" type="button">skip intro ↗</button>
+    </div>
+  </div>
+
+  <div class="site-atmosphere" aria-hidden="true">
+    <canvas id="pixelCanvas"></canvas>
+    <div class="ambient-orb orb-a"></div>
+    <div class="ambient-orb orb-b"></div>
+    <div class="noise-layer"></div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="topbar" id="top">
+    <a class="brand" href="#home" aria-label="Fatima Humbatova, home">
+      <span class="brand-symbol">FH<span>_</span></span>
+      <span class="brand-wordmark"><strong>fatima.humbatova</strong><small>~/personal-portfolio</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#home" class="nav-link active">00<span> / home</span></a>
+      <a href="#journey" class="nav-link">01<span> / journey</span></a>
+      <a href="#projects" class="nav-link">02<span> / projects</span></a>
+      <a href="#experience" class="nav-link">03<span> / experience</span></a>
+      <a href="#connect" class="nav-link">04<span> / connect</span></a>
+    </nav>
+    <a class="top-contact" href="mailto:fatya.gum@gmail.com">LET'S CONNECT <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" hidden>
+    <a href="#home">00 / HOME</a><a href="#journey">01 / JOURNEY</a><a href="#projects">02 / PROJECTS</a><a href="#experience">03 / EXPERIENCE</a><a href="#connect">04 / CONNECT</a>
+  </nav>
+
+  <main id="main">
+    <section class="hero section" id="home" aria-labelledby="heroHeading">
+      <div class="hero-code code-left" aria-hidden="true">const curiosity = true;<br>while (curiosity) {<br>&nbsp;&nbsp;learn();<br>&nbsp;&nbsp;build();<br>&nbsp;&nbsp;protect();<br>}</div>
+      <div class="hero-shell">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-line"></span> 00 / HELLO_WORLD <span class="eyebrow-dot">✦</span> MIAMI, FL</div>
+          <p class="hero-greeting">hi, i'm fatima<span class="cursor-blink">_</span></p>
+          <h1 id="heroHeading"><span>Always learning.</span><span>Always building.</span><span class="warm">Always protecting<span class="period">.</span></span></h1>
+          <p class="hero-description"><span id="heroTyped">Technology is more than understanding how things work. It's about creating what matters and protecting what we depend on.</span><span class="type-cursor" aria-hidden="true">▍</span></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./assets/fatima-resume.pdf" target="_blank" rel="noopener noreferrer"><span class="button-icon">⌁</span> VIEW RESUME <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="#projects">EXPLORE MY WORK <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta"><span><span class="status-lamp"></span> OPEN TO RESEARCH & COLLABORATION</span><span>CS @ FIU <span class="small-star">✳</span> CYBERSECURITY / AI</span></div>
+        </div>
+        <div class="hero-visual" id="heroVisual">
+          <div class="visual-corner top-left" aria-hidden="true">+</div><div class="visual-corner bottom-right" aria-hidden="true">+</div>
+          <div class="illustration-halo" aria-hidden="true"></div>
+          <div class="illustration-wrap"><video class="hero-illustration" id="heroAnimation" width="598" height="448" autoplay muted loop playsinline preload="auto" poster="./assets/fatima-cozy-poster.webp" aria-label="Animated pixel-art scene of Fatima coding at a warmly lit desk, with moving monitor details"><source src="./assets/fatima-cozy-desk.webm" type="video/webm"><img src="./assets/fatima-cozy-desk-original.gif" width="598" height="448" alt="Animated cozy pixel-art desk with coding screens"></video></div>
+          <div class="hero-note note-top">☕ fuelled by curiosity</div>
+          <div class="floating-glyph glyph-one" aria-hidden="true">✳</div><div class="floating-glyph glyph-two" aria-hidden="true">◇</div>
+        </div>
+      </div>
+      <div class="hero-bottom"><a href="#journey" class="scroll-invitation"><span class="scroll-mouse">↓</span> SCROLL TO EXPLORE</a><span class="hero-bottom-right">BUILD CLEARLY <span>✧</span> DOCUMENT CAREFULLY <span>✧</span> KEEP LEARNING</span></div>
+    </section>
+
+    <section class="journey section section-bordered" id="journey" aria-labelledby="journeyHeading">
+      <div class="section-heading reveal"><div class="section-index"><span class="index-square"></span> 01 / MY JOURNEY</div><span class="section-aside">// journey.log</span></div>
+      <div class="journey-path-intro reveal">
+        <div><h2 id="journeyHeading">From curiosity <span class="warm">to purpose.</span></h2><p>A few moments that shaped the way I learn, build, and protect.</p></div>
+        <div class="journey-path-hint" aria-hidden="true"><span class="hint-line"></span> SCROLL TO TRACE MY PATH <span class="hint-arrow">↘</span></div>
+      </div>
+      <div class="journey-path-stage" id="journeyPathStage" aria-label="Four milestones in Fatima's journey, from curiosity to Cyber RECon 2026">
+        <div class="journey-path-ghost" aria-hidden="true">const journey = ['learn', 'build', 'protect'];<br>while (curious) journey.push('discover');</div>
+        <svg class="journey-flow-svg journey-flow-desktop" viewBox="0 0 1100 800" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="journeyGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9a6652"/><stop offset=".48" stop-color="#e7a477"/><stop offset="1" stop-color="#ffd2a6"/></linearGradient><filter id="pathGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter></defs>
+          <path class="journey-path-track" d="M110 225 C270 225 510 240 650 265 C900 295 1050 350 985 510 C960 600 620 650 318 735"/>
+          <path class="journey-path-bloom" id="journeyBloomDesktop" d="M110 225 C270 225 510 240 650 265 C900 295 1050 350 985 510 C960 600 620 650 318 735" filter="url(#pathGlow)"/>
+          <path class="journey-path-progress" id="journeyStrokeDesktop" d="M110 225 C270 225 510 240 650 265 C900 295 1050 350 985 510 C960 600 620 650 318 735"/>
+          <circle class="journey-path-head" id="journeyHeadDesktop" r="6" cx="110" cy="225"/>
+          <circle class="journey-path-comet" id="journeyCometDesktop" r="5" cx="110" cy="225" opacity="0"/>
+          <g class="journey-finale-halo" id="journeyFinalHaloDesktop">
+            <circle class="journey-halo-ring journey-halo-ring-one" cx="318" cy="735" r="16"/>
+            <circle class="journey-halo-ring journey-halo-ring-two" cx="318" cy="735" r="16"/>
+            <path class="journey-halo-sparks" d="M291 713l-5 -6 M347 712l6 -6 M351 754l7 5 M287 759l-6 6"/>
+          </g>
+        </svg>
+        <svg class="journey-flow-svg journey-flow-mobile" viewBox="0 0 390 940" preserveAspectRatio="none" aria-hidden="true">
+          <path class="journey-path-track" d="M45 108 C64 185 83 280 63 340 C38 450 42 485 77 566 C108 663 49 720 72 833"/>
+          <path class="journey-path-bloom" id="journeyBloomMobile" d="M45 108 C64 185 83 280 63 340 C38 450 42 485 77 566 C108 663 49 720 72 833"/>
+          <path class="journey-path-progress" id="journeyStrokeMobile" d="M45 108 C64 185 83 280 63 340 C38 450 42 485 77 566 C108 663 49 720 72 833"/>
+          <circle class="journey-path-head" id="journeyHeadMobile" r="6" cx="45" cy="108"/>
+          <circle class="journey-path-comet" id="journeyCometMobile" r="5" cx="45" cy="108" opacity="0"/>
+          <g class="journey-finale-halo" id="journeyFinalHaloMobile">
+            <circle class="journey-halo-ring journey-halo-ring-one" cx="72" cy="833" r="16"/>
+            <circle class="journey-halo-ring journey-halo-ring-two" cx="72" cy="833" r="16"/>
+            <path class="journey-halo-sparks" d="M45 811l-5 -6 M101 810l6 -6 M105 852l7 5 M41 857l-6 6"/>
+          </g>
+        </svg>
+        <article class="journey-waypoint waypoint-one" data-waypoint="0" tabindex="0" aria-label="Step 1: It started with questions">
+          <span class="journey-point" aria-hidden="true"></span>
+          <div class="waypoint-text"><div class="waypoint-label">01 / ORIGIN</div><h3>It started with questions.</h3><p>I wanted to understand how technology works — and what I could create with it.</p></div>
+        </article>
+        <article class="journey-waypoint waypoint-two" data-waypoint="1" tabindex="0" aria-label="Step 2: A new chapter at FIU">
+          <span class="journey-point" aria-hidden="true"></span>
+          <div class="waypoint-text"><div class="waypoint-label">02 / DISCOVERY</div><h3>A new chapter at FIU.</h3><p>Computer Science opened the door to cybersecurity, AI, and digital forensics.</p></div>
+        </article>
+        <article class="journey-waypoint waypoint-three" data-waypoint="2" tabindex="0" aria-label="Step 3: From learning to building">
+          <span class="journey-point" aria-hidden="true"></span>
+          <div class="waypoint-text"><div class="waypoint-label">03 / RESEARCH</div><h3>From learning to building.</h3><p>Research, hackathons, and independent projects turned curiosity into practice.</p></div>
+        </article>
+        <article class="journey-waypoint waypoint-four" data-waypoint="3" tabindex="0" aria-label="Step 4: Cyber RECon 2026, Defender Category first place">
+          <span class="journey-point" aria-hidden="true"></span>
+          <div class="waypoint-text"><div class="waypoint-label">04 / RECOGNITION</div><h3>A milestone worth remembering.</h3><p>First Place · Defender Category at U.S. Cyber Command's Cyber RECon 2026.</p></div>
+        </article>
+        <span class="journey-path-caption" aria-hidden="true">// still writing the next chapter_</span>
+      </div>
+      <div class="journey-finale" id="journeyFinale" aria-label="Milestone reached. The story continues.">
+        <span class="journey-finale-emblem" aria-hidden="true">✧</span>
+        <div class="journey-finale-copy"><span>04 / MILESTONE REACHED</span><strong>The story continues<span class="journey-finale-dot">.</span></strong></div>
+        <span class="journey-finale-tail" aria-hidden="true">&gt; next_chapter<span>_</span></span>
+      </div>
+      <a class="press-feature reveal" href="https://media.az/society/azerbajdzhanskaya-studentka-pokoryaet-ssha-zoloto-cyberrecon-2026-intervyu-s-fatimoj-gumbatovoj" target="_blank" rel="noopener noreferrer" aria-label="Read Fatima's interview in Russian on Media.az (opens new tab)">
+        <div class="press-symbol" aria-hidden="true">↗</div>
+        <div class="press-copy"><span class="press-eyebrow">FEATURED IN THE PRESS <b>·</b> MEDIA.AZ <b>·</b> JUN 2026 <span class="press-lang">RU</span></span><strong>My journey beyond the code.</strong><span class="press-subtext">An interview about cybersecurity research, learning, and finding purpose in technology.</span></div>
+        <span class="press-cta">READ INTERVIEW <span aria-hidden="true">↗</span></span>
+      </a>
+    </section>
+
+    <section class="projects section section-bordered" id="projects" aria-labelledby="projectsHeading">
+      <div class="section-heading reveal"><div class="section-index"><span class="index-square"></span> 02 / PROJECTS</div><span class="section-aside">// projects.json [ 06 ]</span></div>
+      <div class="projects-intro reveal"><div><h2 id="projectsHeading">Ideas, <span class="warm">put into practice.</span></h2><p>Things I've explored, built, and researched — from digital evidence to secure systems and scientific machine learning.</p></div><span class="projects-count">[ 06 SELECTED ENTRIES ]</span></div>
+      <div class="projects-grid">
+        <article class="project-card reveal" data-tilt>
+          <div class="project-art art-network" aria-hidden="true"><div class="art-grid"></div><svg viewBox="0 0 360 165"><g stroke="#dc9069" stroke-width="1.4" opacity=".7"><path d="M35 104L95 42 163 92 237 39 326 112 M95 42L143 20 237 39 278 79 M163 92L204 132 278 79 326 112 M35 104L132 145 204 132" fill="none"/></g><g fill="#e69d71"><circle cx="35" cy="104" r="4"/><circle cx="95" cy="42" r="5"/><circle cx="163" cy="92" r="6"/><circle cx="237" cy="39" r="5"/><circle cx="326" cy="112" r="4"/><circle cx="204" cy="132" r="4"/><circle cx="278" cy="79" r="5"/></g><circle cx="163" cy="92" r="24" stroke="#e69d71" stroke-width="1" stroke-dasharray="3 6" fill="none"/><text x="176" y="86" fill="#f4c49f" font-size="9">PACKET_04</text></svg><span class="art-caption">NET://TRAFFIC_ANALYSIS</span></div>
+          <div class="project-body"><div class="project-topline"><span>01 / NETWORK SECURITY</span><span class="project-state live"><i></i> PUBLISHED</span></div><h3>TraceTrust <span>↗</span></h3><p>C++20 network forensics and explainable threat detection for offline packet-capture investigations.</p><div class="project-tags"><span>C++20</span><span>PCAP</span><span>FORENSICS</span></div><div class="card-bottom"><span>NETWORK FORENSICS</span><a href="https://github.com/fatyagum-lgtm/tracetrust-network-forensics" target="_blank" rel="noopener noreferrer" aria-label="View TraceTrust on GitHub">GITHUB <span>↗</span></a></div></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-art art-evidence" aria-hidden="true"><div class="scan-wash"></div><div class="checksum-panel"><div class="checksum-top">EVIDENCE SNAPSHOT <span>● SECURED</span></div><div class="checksum-row">SHA-256 <span>8db4:cc19:0a6e:...ff20</span></div><div class="checksum-row">INTEGRITY <span class="checksum-good">MATCH ✓</span></div><div class="checksum-bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><span class="art-caption">EVIDENCE://CHAIN_OF_CUSTODY</span></div>
+          <div class="project-body"><div class="project-topline"><span>02 / DIGITAL FORENSICS</span><span class="project-state live"><i></i> PUBLISHED</span></div><h3>Digital Evidence Analyzer <span>↗</span></h3><p>Offline evidence snapshots, SHA-256 integrity comparisons, and filesystem metadata timelines.</p><div class="project-tags"><span>PYTHON</span><span>SHA-256</span><span>CLI</span></div><div class="card-bottom"><span>EVIDENCE INTEGRITY</span><a href="https://github.com/fatyagum-lgtm/digital-evidence-integrity-timeline-analyzer" target="_blank" rel="noopener noreferrer" aria-label="View Digital Evidence Analyzer on GitHub">GITHUB <span>↗</span></a></div></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-art art-space" aria-hidden="true"><div class="space-stars"></div><div class="space-orbit orbit-one"></div><div class="space-orbit orbit-two"></div><div class="space-sun"></div><div class="space-planet"></div><span class="space-data">TESS / TIC_000237<br>candidate prioritization<br><span>◦ ◦ ● ◦ ◦</span></span><span class="art-caption">SPACE://RESEARCH</span></div>
+          <div class="project-body"><div class="project-topline"><span>03 / SCIENTIFIC ML</span><span class="project-state live"><i></i> PUBLISHED</span></div><h3>ExoSearch AI <span>↗</span></h3><p>Transparent exoplanet-candidate prioritization with leakage-aware evaluation on supplied TESS-shaped data.</p><div class="project-tags"><span>PYTHON</span><span>XGBOOST</span><span>NASA TESS</span></div><div class="card-bottom"><span>ASTRONOMY × ML</span><a href="https://github.com/fatyagum-lgtm/exosearch-ai" target="_blank" rel="noopener noreferrer" aria-label="View ExoSearch AI on GitHub">GITHUB <span>↗</span></a></div></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-art art-phish" aria-hidden="true"><div class="email-doodle"><span>INBOX / URL CHECK</span><div class="email-line"><i></i><i></i></div><div class="email-warning">⚠ suspicious-link.example</div><div class="email-signal"><span></span><span></span><span></span><span></span><span></span></div></div><span class="art-caption">DETECTION://PHISHING</span></div>
+          <div class="project-body"><div class="project-topline"><span>04 / AI SECURITY</span><span class="project-state live"><i></i> PUBLISHED</span></div><h3>PhishGuard AI <span>↗</span></h3><p>Explainable offline phishing URL and email analysis, model calibration, robustness research, and reproducible evaluations.</p><div class="project-tags"><span>ML</span><span>FASTAPI</span><span>REACT</span></div><div class="card-bottom"><span>PHISHING RESEARCH</span><a href="https://github.com/fatyagum-lgtm/phishguard-ai" target="_blank" rel="noopener noreferrer" aria-label="View PhishGuard AI on GitHub">GITHUB <span>↗</span></a></div></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="project-art art-stream" aria-hidden="true"><div class="stream-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="stream-signal">↳ live stream / anomalies <b>▍</b></div><span class="art-caption">STREAM://NETWORK_EVENTS</span></div>
+          <div class="project-body"><div class="project-topline"><span>05 / SYSTEMS SECURITY</span><span class="project-state planned"><i></i> PLANNED</span></div><h3>SentinelFlow IDS <span class="draft-mark">✳</span></h3><p>Planned Rust-based intrusion detection research focused on streaming events and measurable performance.</p><div class="project-tags"><span>RUST</span><span>TOKIO</span><span>IDS</span></div><div class="card-bottom"><span>UP NEXT</span><span class="nonlink-action" aria-label="SentinelFlow IDS is planned">PLANNED <span>↗</span></span></div></div>
+        </article>
+        <article class="project-card reveal award-card" data-tilt>
+          <div class="project-art art-award" aria-hidden="true"><div class="award-spotlight"></div><img class="certificate-thumb" src="./assets/certificate-preview.webp" alt="" loading="eager"><div class="award-stars">✦ ✧ ✦</div><span class="art-caption">RESEARCH://RECOGNITION</span></div>
+          <div class="project-body"><div class="project-topline"><span>06 / RESEARCH</span><span class="project-state awarded"><i></i> FIRST PLACE</span></div><h3>Cyber RECon 2026 <span>↗</span></h3><p>AI-assisted security assurance for critical infrastructure. FIU team, first place in U.S. Cyber Command's Defender category.</p><div class="project-tags"><span>AI SECURITY</span><span>RESEARCH</span><span>DEFENDER</span></div><div class="award-links" aria-label="Cyber RECon independent verification links">
+            <a href="./assets/defender-award.pdf" target="_blank" rel="noopener noreferrer" aria-label="View official Defender Award certificate (PDF opens in new tab)">CERTIFICATE <span aria-hidden="true">↗</span></a>
+            <a href="https://www.dvidshub.net/news/567953/student-researchers-tackle-real-world-cyber-challenges-uscybercoms-26-cyber-recon" target="_blank" rel="noopener noreferrer" aria-label="Read U.S. Cyber Command news story (opens new tab)">OFFICIAL STORY <span aria-hidden="true">↗</span></a>
+            <a href="https://www.dvidshub.net/image/9756545/student-researchers-tackle-real-world-cyber-challenges-uscybercoms-26-cyber-recon" target="_blank" rel="noopener noreferrer" aria-label="View official team photo on DVIDS (opens new tab)">EVENT PHOTO <span aria-hidden="true">↗</span></a>
+          </div></div>
+        </article>
+      </div>
+      <p class="projects-disclaimer reveal"><span>✳</span> Five technical projects, including one still in development. Completed repositories link directly to GitHub. ExoSearch AI includes documented dataset/provenance limitations.</p>
+    </section>
+
+    <section class="experience section section-bordered" id="experience" aria-labelledby="experienceHeading">
+      <div class="section-heading reveal"><div class="section-index"><span class="index-square"></span> 03 / EXPERIENCE</div><span class="section-aside">// career.log</span></div>
+      <div class="experience-grid">
+        <div class="experience-heading reveal"><h2 id="experienceHeading">Learning by <span class="warm">doing.</span></h2><p>From helping people untangle code to turning data into insights, every role has shaped how I think, collaborate, and solve problems.</p><div class="experience-tiny-code">&gt; current_status<br><span>growing, one project at a time<span class="tiny-cursor">▍</span></span></div></div>
+        <div class="experience-timeline reveal" id="careerTimeline">
+          <article class="experience-entry"><div class="timeline-dot"></div><div class="entry-dates">AUG 2025 — PRESENT</div><h3>STARS Peer Tutor</h3><div class="entry-company">FLORIDA INTERNATIONAL UNIVERSITY <span>↗</span></div><p>Help students navigate data structures, algorithms, debugging, and programming fundamentals, strengthening my own communication and technical foundations.</p><div class="entry-chips"><span>MENTORING</span><span>DSA</span><span>PROBLEM SOLVING</span></div></article>
+          <article class="experience-entry"><div class="timeline-dot"></div><div class="entry-dates">MAR — JUL 2023</div><h3>Technology Intern · Data Analysis</h3><div class="entry-company">KONSIS GROUP <span>↗</span></div><p>Worked with Python, Pandas, and SQL to process financial datasets, uncover patterns, and prepare analytical reporting.</p><div class="entry-chips"><span>PYTHON</span><span>SQL</span><span>DATA ANALYSIS</span></div></article>
+          <article class="experience-entry"><div class="timeline-dot"></div><div class="entry-dates">JUL 2021 — JAN 2022</div><h3>Teaching Assistant Intern</h3><div class="entry-company">İZMIR INSTITUTE OF TECHNOLOGY <span>↗</span></div><p>Supported Calculus I and Physics problem-solving sessions and helped prepare instructional materials for students.</p><div class="entry-chips"><span>TEACHING</span><span>STEM</span><span>COLLABORATION</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect section section-bordered" id="connect" aria-labelledby="connectHeading">
+      <div class="section-heading reveal"><div class="section-index"><span class="index-square"></span> 04 / CONNECT</div><span class="section-aside">// ping_me.sh</span></div>
+      <div class="connect-panel reveal" id="connectPanel">
+        <div class="connect-pixel-art" aria-hidden="true"><svg viewBox="0 0 180 170"><g fill="none" stroke="#e59a6e" stroke-width="1.4"><path d="M60 67L92 49 124 67 92 85Z M60 67V104L92 123 124 104V67 M92 85V123"/><path d="M74 59V23L106 6L137 24V59 M74 23L106 42L137 24 M106 42V78" opacity=".48"/><path d="M32 102L63 84 M124 104L153 87 M92 123V157" opacity=".25" stroke-dasharray="4 8"/></g><g fill="#e9a67a"><rect x="46" y="45" width="5" height="5"/><rect x="137" y="99" width="3" height="3"/><rect x="15" y="124" width="6" height="6"/><rect x="156" y="36" width="5" height="5"/><rect x="112" y="151" width="3" height="3"/></g></svg></div>
+        <div class="connect-copy">
+          <div class="connect-terminal-bar" aria-hidden="true"><div class="window-dots"><i></i><i></i><i></i></div><span>connect.sh</span><span class="terminal-bar-end">~/fatima</span></div>
+          <p class="connect-status"><span class="status-lamp"></span> OPEN TO RESEARCH & COLLABORATION</p>
+          <p class="connect-command" aria-label="Terminal command: ./connect.sh"><span class="command-prefix">$</span> <span id="connectTyped">./connect.sh</span><span class="connect-caret" aria-hidden="true">▍</span></p>
+          <h2 id="connectHeading">Let's build something <span>meaningful.</span></h2>
+          <p>Open to research, collaboration, and new ideas. I'd love to hear from you.</p>
+          <div class="connect-buttons"><a href="https://www.linkedin.com/in/fatima-humbatova-54749b286/" target="_blank" rel="noopener noreferrer">LINKEDIN <span>↗</span></a><a href="https://github.com/fatyagum-lgtm" target="_blank" rel="noopener noreferrer">GITHUB <span>↗</span></a><a href="mailto:fatya.gum@gmail.com">EMAIL <span>↗</span></a></div>
+          <p class="connect-terminal-end" aria-hidden="true">// connection welcome · no form required</p>
+        </div>
+      </div>
+      <footer class="footer"><div><span class="footer-heart">✳</span> © <span id="year">2026</span> FATIMA HUMBATOVA <span class="footer-middle">/ BUILT WITH CURIOSITY & A LITTLE COFFEE</span></div><a href="#home">BACK TO TOP ↑</a></footer>
+    </section>
+  </main>
+</body>
+</html>
