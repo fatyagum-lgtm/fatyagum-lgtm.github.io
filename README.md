@@ -28,29 +28,11 @@ python3 -m http.server 8000
 
 Then visit http://localhost:8000. The video and PDFs are static local assets. Internet is only used for Google Fonts and when someone clicks an external link.
 
-## Publish on GitHub Pages
-
-1. Create a public repository named `fatyagum-lgtm.github.io` under the `fatyagum-lgtm` GitHub account.
-2. Use **Add file → Upload files** to upload `index.html`, `styles.css`, `script.js`, the complete `assets/` folder, and `README.md` **at the repository root**. Do not put everything inside an extra folder.
-3. GitHub browser upload may reject the hidden `.nojekyll` file. **It is optional for this site's paths and can be omitted.**
-4. Go to **Settings → Pages**, select **Deploy from a branch**, `main`, `/ (root)`, then save.
-5. After GitHub reports a successful deployment, visit https://fatyagum-lgtm.github.io/.
-
-Note: it can take a few minutes for Pages to appear. To update the CV later, replace `assets/fatima-resume.pdf` with another PDF of the same filename. To update SentinelFlow when the GitHub repository is public, edit only the fifth card in `index.html`.
-
 ## External source links
 
 - [Media.az interview — Russian, 1 June 2026](https://media.az/society/azerbajdzhanskaya-studentka-pokoryaet-ssha-zoloto-cyberrecon-2026-intervyu-s-fatimoj-gumbatovoj)
 - [U.S. Cyber Command / DVIDS official report — 2026 Cyber RECon](https://www.dvidshub.net/news/567953/student-researchers-tackle-real-world-cyber-challenges-uscybercoms-26-cyber-recon)
 - [DVIDS official FIU Defender team photo](https://www.dvidshub.net/image/9756545/student-researchers-tackle-real-world-cyber-challenges-uscybercoms-26-cyber-recon)
-
-The site links to those original publications rather than copying their articles/photos. Research and award copy is descriptive and does not imply USCYBERCOM endorsement of this website.
-
-## Privacy and publication review
-
-**The entire GitHub Pages repo and its assets will be public.** This release includes `assets/fatima-resume.pdf` and `assets/defender-award.pdf` so the Resume and Certificate buttons work. Carefully review those files and their personal details before uploading. If you want either PDF private, remove that PDF and the corresponding public button/link prior to publication.
-
-This portfolio is a personal showcase, not a hosted security scanner. Research benchmarks and limitations belong in the individual GitHub repositories. The fifth project is not represented as completed until it is verified and published.
 
 ## V3.1 motion refinement
 
