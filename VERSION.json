@@ -1,0 +1,10 @@
+{
+  "version": "5.2",
+  "label": "Fatima Cozy Portfolio V5.2",
+  "updated": "2026-10-22",
+  "notes": [
+    "Moved the cube into the connect composition and simplified the footer",
+    "Stronger ambient sparks, pixel rain, and site-wide cursor glow",
+    "Added extra professional micro-details without changing the overall style"
+  ]
+}

@@ -1,35 +1,29 @@
-# Fatima Humbatova — Personal Portfolio
+# Fatima Humbatova — Portfolio
 
-**Always learning. Always building. Always protecting.**
+My personal website: [fatyagum-lgtm.github.io](https://fatyagum-lgtm.github.io/).
 
-Welcome to my personal portfolio!
+I'm a Computer Science student at Florida International University. This site brings together the projects, research, and experiences that interest me most — cybersecurity engineering, digital forensics, and machine learning.
 
-I'm a Computer Science student at Florida International University, exploring the intersection of cybersecurity, artificial intelligence, and digital forensics.
+The design is meant to feel like a small corner of my workspace: a looping pixel-art desk scene, graphite and espresso tones with mist-blue accents, and a small amount of motion. The animated journey traces a few milestones rather than repeating my résumé.
 
-I created this space to share my technical projects, research experiences, and the journey behind them.
+## Projects
 
-### Explore My Portfolio
+Five linked repositories: [PhishGuard AI](https://github.com/fatyagum-lgtm/phishguard-ai), [SentinelFlow IDS](https://github.com/fatyagum-lgtm/sentinelflow-ids), [TraceTrust](https://github.com/fatyagum-lgtm/tracetrust-network-forensics), [Digital Evidence Integrity & Timeline Analyzer](https://github.com/fatyagum-lgtm/digital-evidence-integrity-timeline-analyzer), and [ExoSearch AI](https://github.com/fatyagum-lgtm/exosearch-ai). The sixth card covers our Cyber RECon 2026 research and first-place recognition, with links to public sources and the award certificate.
 
-**[Visit My Website ↗](https://fatyagum-lgtm.github.io/)**
+## Site
 
-My portfolio features:
+Made with HTML, CSS, and JavaScript. No framework or build step is required. The code includes responsive layouts, keyboard-accessible navigation, and reduced-motion support.
 
-- **My Journey** — The experiences and milestones that shaped my interests.
-- **Projects** — My work in cybersecurity, network forensics, machine learning, and software engineering.
-- **Research & Recognition** — Including our first-place Defender Category achievement at U.S. Cyber Command's Cyber RECon 2026.
-- **Experience** — My professional, academic, and technical involvement.
-- **Connect** — Ways to reach me and explore my work.
+To preview locally, open `index.html` or run `python3 -m http.server 8000` in this folder and visit `http://localhost:8000`.
 
-### Built With
+The source GIF is retained in `assets/`; an optimized WebM is used for the primary animation. The Resume button opens `assets/fatima-resume.pdf`, and the Cyber RECon certificate button opens `assets/defender-award.pdf`. Both PDFs are public when deployed.
 
-HTML · CSS · JavaScript · JetBrains Mono
+## Connect
 
-Designed with a cozy pixel-art aesthetic, warm charcoal and amber colors, interactive animations, and responsive layouts.
+[LinkedIn](https://www.linkedin.com/in/fatima-humbatova-54749b286/) · [GitHub](https://github.com/fatyagum-lgtm) · [Email](mailto:fatya.gum@gmail.com)
 
-### Let's Connect
+## Changes in V5.1
 
-- [LinkedIn](https://www.linkedin.com/in/fatima-humbatova-54749b286/)
-- [GitHub](https://github.com/fatyagum-lgtm)
-- [Email](mailto:fatya.gum@gmail.com)
+Restored the earlier `00 / HELLO_WORLD` hero label and simplified the visible branding so the page no longer repeats `CS @ FIU`. Added a decorative footer cube, denser atmosphere, and extra section accents to make the layout feel less empty without turning it into an obviously AI-styled site.
 
-*Always curious about what I can learn, create, and protect next.*
+The animated journey path was tuned to move more smoothly with scroll, and the original desk animation now blends more softly at the top and bottom edges. The `☕ fuelled by curiosity` tag was also recolored toward a cooler blue-brown balance to fit the scene better. The live site URL remains the same when these files replace the existing GitHub Pages repository contents.

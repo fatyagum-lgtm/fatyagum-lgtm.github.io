@@ -138,8 +138,8 @@
         card.style.setProperty('--my', `${localY * 100}%`);
         cancelAnimationFrame(request);
         request = requestAnimationFrame(() => {
-          const x = (localY - .5) * -3.5;
-          const y = (localX - .5) * 3.5;
+          const x = (localY - .5) * -1.1;
+          const y = (localX - .5) * 1.1;
           card.style.transform = `perspective(1100px) rotateX(${x}deg) rotateY(${y}deg) translateY(-2px)`;
         });
       }, { passive: true });
@@ -152,27 +152,33 @@
     });
   }
 
-  // Fine cursor glow in hero/connect; only while pointer remains in those sections.
+  // Cursor glow follows across the page and intensifies on interactive targets.
   const glow = $('#cursorGlow');
   if (glow && finePointer.matches && !reducedMotion.matches) {
     let gx = -999, gy = -999, tx = -999, ty = -999, active = false;
     let started = false;
     const tick = () => {
-      gx += (tx - gx) * .13;
-      gy += (ty - gy) * .13;
+      gx += (tx - gx) * .16;
+      gy += (ty - gy) * .16;
       glow.style.left = `${gx}px`;
       glow.style.top = `${gy}px`;
       if (active) requestAnimationFrame(tick); else started = false;
     };
-    ['#home', '#connect'].forEach(selector => {
-      const section = $(selector);
-      section?.addEventListener('pointerenter', () => {
-        active = true;
-        document.body.classList.add('cursor-active');
-        if (!started) { started = true; requestAnimationFrame(tick); }
-      });
-      section?.addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; }, { passive: true });
-      section?.addEventListener('pointerleave', () => { active = false; document.body.classList.remove('cursor-active'); });
+    const start = () => {
+      active = true;
+      document.body.classList.add('cursor-active');
+      if (!started) { started = true; requestAnimationFrame(tick); }
+    };
+    const stop = () => {
+      active = false;
+      document.body.classList.remove('cursor-active');
+      glow.classList.remove('cursor-strong');
+    };
+    window.addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; start(); }, { passive: true });
+    window.addEventListener('pointerleave', stop);
+    $$('a, button, .project-card, .connect-panel, .press-feature').forEach(el => {
+      el.addEventListener('pointerenter', () => glow.classList.add('cursor-strong'));
+      el.addEventListener('pointerleave', () => glow.classList.remove('cursor-strong'));
     });
   }
 
@@ -202,14 +208,14 @@
     const random = (min, max) => min + Math.random() * (max - min);
     const makeParticle = (anywhere = false) => ({
       x: random(0, width), y: anywhere ? random(0, height) : random(-height * .25, -6),
-      v: random(7, 26), size: Math.random() < .3 ? 4 : 2,
-      drift: random(-3, 3), a: random(.24, .63), phase: random(0, Math.PI * 2)
+      v: random(10, 34), size: Math.random() < .14 ? 5 : (Math.random() < .45 ? 3 : 2),
+      drift: random(-4, 4), a: random(.42, .95), phase: random(0, Math.PI * 2), trail: Math.random() < .2 ? random(10, 28) : 0
     });
     const resize = () => {
       width = window.innerWidth; height = window.innerHeight;
       canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.min(96, Math.max(22, Math.round(width / 17)));
+      const count = Math.min(150, Math.max(44, Math.round(width / 11)));
       particles = Array.from({ length: count }, () => makeParticle(true));
     };
     const render = (timestamp) => {
@@ -229,12 +235,16 @@
           p.y += (dy / distance) * force * 35 * elapsed;
         }
         if (p.y > height + 12 || p.x < -30 || p.x > width + 30) particles[i] = makeParticle(false);
-        ctx.fillStyle = `rgba(235,157,104,${p.a})`;
+        if (p.trail) {
+          ctx.fillStyle = `rgba(188,149,121,${p.a * .16})`;
+          ctx.fillRect(Math.round(p.x), Math.round(p.y - p.trail), 1, p.trail);
+        }
+        ctx.fillStyle = i % 5 === 0 ? `rgba(190,151,125,${p.a * .72})` : `rgba(142,187,210,${p.a * .78})`;
         ctx.fillRect(Math.round(p.x), Math.round(p.y), p.size, p.size);
       }
       // Very faint connecting fragments add dimensionality without impairing readability.
       if (width > 700) {
-        ctx.strokeStyle = 'rgba(231,146,98,.09)';
+        ctx.strokeStyle = 'rgba(135,184,205,.085)';
         ctx.lineWidth = 1;
         for (let i = 0; i < particles.length - 1; i += 4) {
           const p = particles[i], q = particles[i + 1];
@@ -323,7 +333,7 @@
     const elapsed = previousFrame ? Math.min(70, now - previousFrame) : 16;
     previousFrame = now;
     // Frame-rate independent damping: a fluid 180 ms response to wheel/touch scroll.
-    const blend = 1 - Math.exp(-elapsed / 180);
+    const blend = 1 - Math.exp(-elapsed / 285);
     pathProgress += (targetProgress - pathProgress) * blend;
     if (Math.abs(targetProgress - pathProgress) < .0007) pathProgress = targetProgress;
     renderJourney(pathProgress);
@@ -344,8 +354,8 @@
     const rect = journeyStage.getBoundingClientRect();
     // Begins when the stage enters the lower viewport; finishes when its final
     // point reaches the upper third. Full tracing remains synchronized to reading.
-    const start = window.innerHeight * .78;
-    const end = window.innerHeight * .28;
+    const start = window.innerHeight * .82;
+    const end = window.innerHeight * .24;
     targetProgress = clamp01((start - rect.top) / Math.max(1, rect.height + start - end));
     if (reducedMotion.matches) targetProgress = 1;
     requestJourneyFrame();
@@ -405,7 +415,7 @@
     });
   }
 
-  // V3 desk lighting — a responsive amber bloom follows the cursor, without moving the GIF.
+  // V5 desk lighting — subtle warm desk illumination follows pointer without moving the original GIF.
   const desk = $('#heroVisual');
   if (desk && finePointer.matches && !reducedMotion.matches) {
     let raf = 0, latestX = 65, latestY = 45;
@@ -424,6 +434,21 @@
   }
 
   // V3 connect: one short terminal command on reveal, not an endlessly blinking typing effect.
+
+
+  // Gentle scroll depth on small decorative elements so the page feels less static.
+  const floaters = $$('.hero-orbit, .footer-cube-wrap');
+  const updateFloaters = () => {
+    if (reducedMotion.matches) return;
+    const y = window.scrollY || window.pageYOffset || 0;
+    floaters.forEach((el, i) => {
+      const amount = (i % 2 === 0 ? 1 : -1) * Math.min(12, y * 0.012);
+      el.style.transform = `translate3d(0, ${amount.toFixed(2)}px, 0)`;
+    });
+  };
+  window.addEventListener('scroll', updateFloaters, { passive: true });
+  updateFloaters();
+
   const connectPanel = $('#connectPanel');
   const connectTyped = $('#connectTyped');
   if (connectPanel && connectTyped && !reducedMotion.matches && 'IntersectionObserver' in window) {
